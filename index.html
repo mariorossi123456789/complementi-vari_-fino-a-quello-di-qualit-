@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Menu Prove di Analisi Logica - Esercitazioni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #F2F5FA;
+            --ink: #18202E;
+            --soft: #5B6678;
+            --card: #FFFFFF;
+            --line: #D5DCE8;
+            --v: #7A3FB5;
+            --vbg: #EBDDF7;
+            --o: #E8800C;
+            --g: #27914A;
+            box-sizing: border-box;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --bg: #121722;
+                --ink: #EEF1F7;
+                --soft: #9AA6BA;
+                --card: #1B2231;
+                --line: #2D3750;
+                --v: #C08BF2;
+                --vbg: #3A2652;
+                --o: #FFA640;
+                --g: #58C57B;
+            }
+        }
+
+        * { box-sizing: border-box; }
+        
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--ink);
+            font-family: "Atkinson Hyperlegible", Verdana, sans-serif;
+            font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+            line-height: 1.5;
+        }
+
+        header {
+            padding: 24px 5vw;
+            border-bottom: 3px solid var(--line);
+            background: var(--card);
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: "Bricolage Grotesque", Georgia, sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 0 0 8px;
+            color: var(--ink);
+        }
+
+        header p {
+            margin: 0;
+            color: var(--soft);
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 4vh 5vw 8vh;
+        }
+
+        .intro-box {
+            background: var(--vbg);
+            border-left: 6px solid var(--v);
+            border-radius: 12px;
+            padding: 1.2em 1.5em;
+            margin-bottom: 2em;
+        }
+
+        .grid {
+            display: grid;
+            gap: 16px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--card);
+            border: 3px solid var(--line);
+            border-radius: 16px;
+            padding: 1.2em 1.5em;
+            text-decoration: none;
+            color: var(--ink);
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card:hover, .card:focus-visible {
+            transform: translateY(-2px);
+            border-color: var(--v);
+            outline: none;
+        }
+
+        .card-info h2 {
+            font-family: "Bricolage Grotesque", Georgia, sans-serif;
+            font-size: 1.35rem;
+            margin: 0 0 4px;
+        }
+
+        .card-info p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: var(--soft);
+        }
+
+        .badge {
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: var(--vbg);
+            color: var(--v);
+            padding: 0.4em 0.8em;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+
+        .arrow {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--v);
+            margin-left: 12px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: var(--soft);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--line);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Esercitazioni di Analisi Logica</h1>
+    <p>Seleziona una prova per iniziare il test online</p>
+</header>
+
+<main>
+    <div class="intro-box">
+        <strong>Come funziona:</strong> Scegli un'esercitazione tra quelle in elenco. Rispondi alle domande a risposta multipla e consulta il punteggio e la spiegazione dettagliata degli errori al termine della prova.
+    </div>
+
+    <div class="grid">
+        <!-- Prova 1 -->
+        <a href="01-argomento-e-limitazione.html" class="card">
+            <div class="card-info">
+                <h2>Prova 1: Argomento e limitazione</h2>
+                <p>12 domande per imparare a distinguere il tema del discorso dal recinto della qualità.</p>
+            </div>
+            <span class="badge">12 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+
+        <!-- Prova 2 -->
+        <a href="02-argomento-e-limitazione-2.html" class="card">
+            <div class="card-info">
+                <h2>Prova 2: Argomento e limitazione (Avanzata)</h2>
+                <p>12 domande a risposta multipla con approfondimenti sul predicato.</p>
+            </div>
+            <span class="badge">12 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+
+        <!-- Prova 3 -->
+        <a href="03-argomento-limitazione-paragone.html" class="card">
+            <div class="card-info">
+                <h2>Prova 3: Argomento, limitazione e paragone</h2>
+                <p>12 domande per introdurre e individuare il secondo termine di confronto.</p>
+            </div>
+            <span class="badge">12 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+
+        <!-- Prova 4 -->
+        <a href="04-tre-complementi-insieme.html" class="card">
+            <div class="card-info">
+                <h2>Prova 4: Tutti e tre insieme</h2>
+                <p>12 domande di ripasso e confronto combinato su argomento, limitazione e paragone.</p>
+            </div>
+            <span class="badge">12 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+
+        <!-- Prova 5 -->
+        <a href="05-complemento-di-materia.html" class="card">
+            <div class="card-info">
+                <h2>Prova 5: Il complemento di materia</h2>
+                <p>12 domande per identificare la sostanza di cui è fatto un oggetto e applicare la regola del "100%".</p>
+            </div>
+            <span class="badge">12 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+
+        <!-- Prova 6 -->
+        <a href="06-tutti-i-complementi.html" class="card">
+            <div class="card-info">
+                <h2>Prova 6: Tutti i complementi</h2>
+                <p>14 domande generali con argomento, limitazione, paragone e materia mescolati.</p>
+            </div>
+            <span class="badge">14 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+
+        <!-- Prova 7 -->
+        <a href="07-complementi-con-di.html" class="card">
+            <div class="card-info">
+                <h2>Prova 7: Tanti "di", ruoli diversi</h2>
+                <p>15 domande sui complementi introdotti dalla preposizione "di" (specificazione, denominazione, materia, ecc.).</p>
+            </div>
+            <span class="badge">15 domande</span>
+            <span class="arrow">&rarr;</span>
+        </a>
+    </div>
+</main>
+
+<footer>
+    &copy; Esercitazioni di Grammatica - Piattaforma GitHub Pages
+</footer>
+
+</body>
+</html>
